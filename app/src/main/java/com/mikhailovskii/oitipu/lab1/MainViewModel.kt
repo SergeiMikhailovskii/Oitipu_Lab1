@@ -19,6 +19,10 @@ class MainViewModel : ViewModel() {
         }
     }
 
+    fun calculateWithLib() {
+
+    }
+
     fun calculatePln() {
         val values: Stack<Double> = Stack()
         var lastSpace = 0

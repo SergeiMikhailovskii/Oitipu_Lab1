@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_input_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:maxLines="1"
+        android:text="Enter"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_output_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="170dp"
+        android:text="Result"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_input_text" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hor_30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hor_44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.44" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hor_58"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.58" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hor_72"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.72" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/hor_86"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.86" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vert_05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vert_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vert_25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vert_35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vert_55"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vert_70"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vert_85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vert_40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_clear"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="C"
+        android:textColor="#d8bbba"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_44"
+        app:layout_constraintEnd_toEndOf="@id/vert_55"
+        app:layout_constraintStart_toStartOf="@id/vert_40"
+        app:layout_constraintTop_toTopOf="@id/hor_30" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_left_bracket"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="("
+        android:textColor="#a3b7cb"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_44"
+        app:layout_constraintEnd_toEndOf="@id/vert_70"
+        app:layout_constraintStart_toStartOf="@id/vert_55"
+        app:layout_constraintTop_toTopOf="@id/hor_30" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_right_bracket"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text=")"
+        android:textColor="#a3b7cb"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_44"
+        app:layout_constraintEnd_toEndOf="@id/vert_85"
+        app:layout_constraintStart_toStartOf="@id/vert_70"
+        app:layout_constraintTop_toTopOf="@id/hor_30" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_divide"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="/"
+        android:textColor="#a3b7cb"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_44"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/vert_85"
+        app:layout_constraintTop_toTopOf="@id/hor_30" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_seven"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="7"
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_58"
+        app:layout_constraintEnd_toEndOf="@id/vert_55"
+        app:layout_constraintStart_toStartOf="@id/vert_40"
+        app:layout_constraintTop_toTopOf="@id/hor_44" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_eight"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="8"
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_58"
+        app:layout_constraintEnd_toEndOf="@id/vert_70"
+        app:layout_constraintStart_toStartOf="@id/vert_55"
+        app:layout_constraintTop_toTopOf="@id/hor_44" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_nine"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="9"
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_58"
+        app:layout_constraintEnd_toEndOf="@id/vert_85"
+        app:layout_constraintStart_toStartOf="@id/vert_70"
+        app:layout_constraintTop_toTopOf="@id/hor_44" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_multiply"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="*"
+        android:textColor="#a3b7cb"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_58"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/vert_85"
+        app:layout_constraintTop_toTopOf="@id/hor_44" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_four"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="4"
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_72"
+        app:layout_constraintEnd_toEndOf="@id/vert_55"
+        app:layout_constraintStart_toStartOf="@id/vert_40"
+        app:layout_constraintTop_toTopOf="@id/hor_58" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_five"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="5"
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_72"
+        app:layout_constraintEnd_toEndOf="@id/vert_70"
+        app:layout_constraintStart_toStartOf="@id/vert_55"
+        app:layout_constraintTop_toTopOf="@id/hor_58" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_six"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="6"
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_72"
+        app:layout_constraintEnd_toEndOf="@id/vert_85"
+        app:layout_constraintStart_toStartOf="@id/vert_70"
+        app:layout_constraintTop_toTopOf="@id/hor_58" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_substract"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="-"
+        android:textColor="#a3b7cb"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_72"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/vert_85"
+        app:layout_constraintTop_toTopOf="@id/hor_58" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_one"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="1"
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_86"
+        app:layout_constraintEnd_toEndOf="@id/vert_55"
+        app:layout_constraintStart_toStartOf="@id/vert_40"
+        app:layout_constraintTop_toTopOf="@id/hor_72" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_two"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="2"
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_86"
+        app:layout_constraintEnd_toEndOf="@id/vert_70"
+        app:layout_constraintStart_toStartOf="@id/vert_55"
+        app:layout_constraintTop_toTopOf="@id/hor_72" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_three"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="3"
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_86"
+        app:layout_constraintEnd_toEndOf="@id/vert_85"
+        app:layout_constraintStart_toStartOf="@id/vert_70"
+        app:layout_constraintTop_toTopOf="@id/hor_72" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_add"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="+"
+        android:textColor="#a3b7cb"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_86"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/vert_85"
+        app:layout_constraintTop_toTopOf="@id/hor_72" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_percent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="#fcf9fc"
+        android:text="%"
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/vert_55"
+        app:layout_constraintStart_toStartOf="@id/vert_40"
+        app:layout_constraintTop_toTopOf="@id/hor_86" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_zero"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="#fcf9fc"
+        android:text="0"
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/vert_70"
+        app:layout_constraintStart_toStartOf="@id/vert_55"
+        app:layout_constraintTop_toTopOf="@id/hor_86" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_point"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="#fcf9fc"
+        android:text="."
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/vert_85"
+        app:layout_constraintStart_toStartOf="@id/vert_70"
+        app:layout_constraintTop_toTopOf="@id/hor_86" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_equals_hor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#5aa7e4"
+        android:text="="
+        android:textColor="#adecff"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/vert_85"
+        app:layout_constraintTop_toTopOf="@id/hor_86" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_sqrt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="√"
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_44"
+        app:layout_constraintEnd_toEndOf="@id/vert_15"
+        app:layout_constraintStart_toStartOf="@id/vert_05"
+        app:layout_constraintTop_toTopOf="@id/hor_30" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_sin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="sin"
+        android:textAllCaps="false"
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_44"
+        app:layout_constraintEnd_toEndOf="@id/vert_25"
+        app:layout_constraintStart_toStartOf="@id/vert_15"
+        app:layout_constraintTop_toTopOf="@id/hor_30" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_cos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="cos"
+        android:textAllCaps="false"
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_44"
+        app:layout_constraintEnd_toEndOf="@id/vert_35"
+        app:layout_constraintStart_toStartOf="@id/vert_25"
+        app:layout_constraintTop_toTopOf="@id/hor_30" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_tan"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="tan"
+        android:textAllCaps="false"
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_58"
+        app:layout_constraintEnd_toEndOf="@id/vert_15"
+        app:layout_constraintStart_toStartOf="@id/vert_05"
+        app:layout_constraintTop_toTopOf="@id/hor_44" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_exp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="exp"
+        android:textAllCaps="false"
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_58"
+        app:layout_constraintEnd_toEndOf="@id/vert_25"
+        app:layout_constraintStart_toStartOf="@id/vert_15"
+        app:layout_constraintTop_toTopOf="@id/hor_44" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_log"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="log"
+        android:textAllCaps="false"
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_58"
+        app:layout_constraintEnd_toEndOf="@id/vert_35"
+        app:layout_constraintStart_toStartOf="@id/vert_25"
+        app:layout_constraintTop_toTopOf="@id/hor_44" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_reverse"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="1/x"
+        android:textAllCaps="false"
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_72"
+        app:layout_constraintEnd_toEndOf="@id/vert_15"
+        app:layout_constraintStart_toStartOf="@id/vert_05"
+        app:layout_constraintTop_toTopOf="@id/hor_58" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_square"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="x^2"
+        android:textAllCaps="false"
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_72"
+        app:layout_constraintEnd_toEndOf="@id/vert_25"
+        app:layout_constraintStart_toStartOf="@id/vert_15"
+        app:layout_constraintTop_toTopOf="@id/hor_58" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_pow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="x^y"
+        android:textAllCaps="false"
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_72"
+        app:layout_constraintEnd_toEndOf="@id/vert_35"
+        app:layout_constraintStart_toStartOf="@id/vert_25"
+        app:layout_constraintTop_toTopOf="@id/hor_58" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_abs"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="|x|"
+        android:textAllCaps="false"
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_86"
+        app:layout_constraintEnd_toEndOf="@id/vert_15"
+        app:layout_constraintStart_toStartOf="@id/vert_05"
+        app:layout_constraintTop_toTopOf="@id/hor_72" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_asin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="asin"
+        android:textAllCaps="false"
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_86"
+        app:layout_constraintEnd_toEndOf="@id/vert_25"
+        app:layout_constraintStart_toStartOf="@id/vert_15"
+        app:layout_constraintTop_toTopOf="@id/hor_72" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_acos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#fcf9fc"
+        android:text="acos"
+        android:textAllCaps="false"
+        android:textColor="#b0b0b0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/hor_86"
+        app:layout_constraintEnd_toEndOf="@id/vert_35"
+        app:layout_constraintStart_toStartOf="@id/vert_25"
+        app:layout_constraintTop_toTopOf="@id/hor_72" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -287,7 +287,7 @@
         app:layout_constraintTop_toTopOf="@id/hor_52" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_three"
+        android:id="@+id/btn_one"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="10dp"
@@ -295,7 +295,7 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="5dp"
         android:background="#fcf9fc"
-        android:text="3"
+        android:text="1"
         android:textColor="#b0b0b0"
         android:textSize="56sp"
         app:layout_constraintBottom_toBottomOf="@id/hor_84"
@@ -321,7 +321,7 @@
         app:layout_constraintTop_toTopOf="@id/hor_68" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_one"
+        android:id="@+id/btn_three"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="5dp"
@@ -329,7 +329,7 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="5dp"
         android:background="#fcf9fc"
-        android:text="1"
+        android:text="3"
         android:textColor="#b0b0b0"
         android:textSize="56sp"
         app:layout_constraintBottom_toBottomOf="@id/hor_84"
