@@ -3,6 +3,8 @@ package com.mikhailovskii.oitipu.lab1
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import java.util.*
+import javax.script.ScriptEngineManager
+import javax.script.ScriptException
 import kotlin.math.sqrt
 
 class MainViewModel : ViewModel() {
@@ -20,7 +22,20 @@ class MainViewModel : ViewModel() {
     }
 
     fun calculateWithLib() {
-
+        val scriptEngineManager = ScriptEngineManager()
+        val scriptEngine = scriptEngineManager.getEngineByName("rhino")
+        try {
+            val value = scriptEngine.eval(
+                input.value
+                    ?.replace(" ", "")
+                    ?.replace("sin", "Math.sin")
+                    ?.replace("cos", "Math.cos")
+                    ?.replace("tan", "Math.tan")
+            ) as Double
+            output.value = value.toString()
+        } catch (e: ScriptException) {
+            output.value = "Expression cannot be evaluated :("
+        }
     }
 
     fun calculatePln() {

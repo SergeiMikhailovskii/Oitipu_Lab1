@@ -15,11 +15,15 @@ class MainActivity : AppCompatActivity() {
     private val viewModel: MainViewModel by viewModels()
 
     private val addDigitToInputExpression = View.OnClickListener {
-        viewModel.input.value = viewModel.input.value + (it as AppCompatButton).text
+        viewModel.input.value += (it as AppCompatButton).text
     }
 
     private val addSignToInputExpression = View.OnClickListener {
-        viewModel.input.value = viewModel.input.value + " ${(it as AppCompatButton).text} "
+        viewModel.input.value += " ${(it as AppCompatButton).text} "
+    }
+
+    private val addFunctionWithOpeningBracket = View.OnClickListener {
+        viewModel.input.value += "${(it as AppCompatButton).text}("
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,7 +53,18 @@ class MainActivity : AppCompatActivity() {
         btn_one.setOnClickListener(addDigitToInputExpression)
         btn_two.setOnClickListener(addDigitToInputExpression)
         btn_three.setOnClickListener(addDigitToInputExpression)
+        btn_zero.setOnClickListener(addDigitToInputExpression)
         btn_point.setOnClickListener(addDigitToInputExpression)
+        btn_add.setOnClickListener(addDigitToInputExpression)
+        btn_substract.setOnClickListener(addDigitToInputExpression)
+        btn_multiply.setOnClickListener(addDigitToInputExpression)
+        btn_divide.setOnClickListener(addDigitToInputExpression)
+
+        btn_sin?.setOnClickListener(addFunctionWithOpeningBracket)
+        btn_cos?.setOnClickListener(addFunctionWithOpeningBracket)
+        btn_tan?.setOnClickListener(addFunctionWithOpeningBracket)
+        btn_asin?.setOnClickListener(addFunctionWithOpeningBracket)
+        btn_acos?.setOnClickListener(addFunctionWithOpeningBracket)
 
         btn_clear.setOnClickListener {
             viewModel.input.value = ""
@@ -81,6 +96,7 @@ class MainActivity : AppCompatActivity() {
         btn_one.setOnClickListener(addDigitToInputExpression)
         btn_two.setOnClickListener(addDigitToInputExpression)
         btn_three.setOnClickListener(addDigitToInputExpression)
+        btn_zero.setOnClickListener(addDigitToInputExpression)
         btn_point.setOnClickListener(addDigitToInputExpression)
 
         btn_multiply.setOnClickListener(addSignToInputExpression)
