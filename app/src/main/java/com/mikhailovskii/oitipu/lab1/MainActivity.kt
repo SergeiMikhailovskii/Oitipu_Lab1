@@ -26,6 +26,14 @@ class MainActivity : AppCompatActivity() {
         viewModel.input.value += "${(it as AppCompatButton).text}("
     }
 
+    private val absClickListener = View.OnClickListener {
+        viewModel.input.value += "|"
+    }
+
+    private val reverseClickListener = View.OnClickListener {
+        viewModel.input.value = "1/(${viewModel.input.value})"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -65,6 +73,14 @@ class MainActivity : AppCompatActivity() {
         btn_tan?.setOnClickListener(addFunctionWithOpeningBracket)
         btn_asin?.setOnClickListener(addFunctionWithOpeningBracket)
         btn_acos?.setOnClickListener(addFunctionWithOpeningBracket)
+
+        btn_sqrt?.setOnClickListener(addFunctionWithOpeningBracket)
+        btn_exp?.setOnClickListener(addFunctionWithOpeningBracket)
+        btn_ln?.setOnClickListener(addFunctionWithOpeningBracket)
+
+        btn_abs?.setOnClickListener(absClickListener)
+
+        btn_reverse?.setOnClickListener(reverseClickListener)
 
         btn_clear.setOnClickListener {
             viewModel.input.value = ""

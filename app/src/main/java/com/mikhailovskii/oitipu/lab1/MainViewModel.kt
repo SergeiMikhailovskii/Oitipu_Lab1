@@ -25,13 +25,23 @@ class MainViewModel : ViewModel() {
         val scriptEngineManager = ScriptEngineManager()
         val scriptEngine = scriptEngineManager.getEngineByName("rhino")
         try {
-            val value = scriptEngine.eval(
-                input.value
-                    ?.replace(" ", "")
-                    ?.replace("sin", "Math.sin")
-                    ?.replace("cos", "Math.cos")
-                    ?.replace("tan", "Math.tan")
-            ) as Double
+            var expression = input.value
+                ?.replace(" ", "")
+                ?.replace("sin", "Math.sin")
+                ?.replace("cos", "Math.cos")
+                ?.replace("tan", "Math.tan")
+                ?.replace("√", "Math.sqrt")
+                ?.replace("exp", "Math.exp")
+                ?.replace("ln", "Math.log")
+
+            expression = expression?.replaceAbs()
+
+            val value = scriptEngine.eval(expression) as Double
+
+            if (value.isNaN()) {
+                throw ScriptException("")
+            }
+
             output.value = value.toString()
         } catch (e: ScriptException) {
             output.value = "Expression cannot be evaluated :("
@@ -135,6 +145,17 @@ class MainViewModel : ViewModel() {
             if (res.isEmpty()) reversePolish.pop().toString() + res else reversePolish.pop()
                 .toString() + " " + res
         return res
+    }
+
+    private fun String.replaceAbs() = buildString {
+        var inAbsBracket = false
+        for (c in this@replaceAbs) {
+            if (c == '|') {
+                inAbsBracket = !inAbsBracket
+                append(if (inAbsBracket) "Math.abs(" else ")")
+            } else
+                append(c)
+        }
     }
 
     private fun isOperator(c: Char) = c in "+-*/()"
