@@ -34,6 +34,15 @@ class MainActivity : AppCompatActivity() {
         viewModel.input.value = "1/(${viewModel.input.value})"
     }
 
+    private val squareClickListener = View.OnClickListener {
+        viewModel.input.value += "^2"
+    }
+
+    private val powerClickListener = View.OnClickListener {
+        viewModel.input.value += "^"
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -81,6 +90,9 @@ class MainActivity : AppCompatActivity() {
         btn_abs?.setOnClickListener(absClickListener)
 
         btn_reverse?.setOnClickListener(reverseClickListener)
+
+        btn_square?.setOnClickListener(squareClickListener)
+        btn_pow?.setOnClickListener(powerClickListener)
 
         btn_clear.setOnClickListener {
             viewModel.input.value = ""

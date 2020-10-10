@@ -22,19 +22,22 @@ class MainViewModel : ViewModel() {
     }
 
     fun calculateWithLib() {
+        val inputValue = input.value ?: return
+
         val scriptEngineManager = ScriptEngineManager()
         val scriptEngine = scriptEngineManager.getEngineByName("rhino")
-        try {
-            var expression = input.value
-                ?.replace(" ", "")
-                ?.replace("sin", "Math.sin")
-                ?.replace("cos", "Math.cos")
-                ?.replace("tan", "Math.tan")
-                ?.replace("√", "Math.sqrt")
-                ?.replace("exp", "Math.exp")
-                ?.replace("ln", "Math.log")
 
-            expression = expression?.replaceAbs()
+        try {
+            val expression = inputValue
+                .replace(" ", "")
+                .replace("sin", "Math.sin")
+                .replace("cos", "Math.cos")
+                .replace("tan", "Math.tan")
+                .replace("√", "Math.sqrt")
+                .replace("exp", "Math.exp")
+                .replace("ln", "Math.log")
+                .replaceAbs()
+                .replacePow()
 
             val value = scriptEngine.eval(expression) as Double
 
@@ -42,7 +45,9 @@ class MainViewModel : ViewModel() {
                 throw ScriptException("")
             }
 
-            output.value = value.toString()
+            output.value =
+                if (value - value.toLong() == 0.0) value.toLong().toString() else value.toString()
+
         } catch (e: ScriptException) {
             output.value = "Expression cannot be evaluated :("
         }
@@ -106,7 +111,6 @@ class MainViewModel : ViewModel() {
         var i = 0
         while (i < len) {
 
-            //deal with space
             while (i < len && exp[i] == ' ') i++
 
             if (i == len) break
@@ -156,6 +160,19 @@ class MainViewModel : ViewModel() {
             } else
                 append(c)
         }
+    }
+
+    private fun String.replacePow(): String {
+        var result = ""
+        val elements = this.split('+', '-', '*', '/', '=').toMutableList()
+        elements.forEach { s ->
+            if (s.contains('^')) {
+                val localSplit = s.split('^')
+                result = this.replace(s, "Math.pow(${localSplit[0]},${localSplit[1]})")
+            }
+        }
+
+        return result
     }
 
     private fun isOperator(c: Char) = c in "+-*/()"

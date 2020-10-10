@@ -390,23 +390,6 @@
         app:layout_constraintTop_toTopOf="@id/hor_72" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_percent"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="10dp"
-        android:background="#fcf9fc"
-        android:text="%"
-        android:textColor="#b0b0b0"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/vert_55"
-        app:layout_constraintStart_toStartOf="@id/vert_40"
-        app:layout_constraintTop_toTopOf="@id/hor_86" />
-
-    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_zero"
         android:layout_width="0dp"
         android:layout_height="0dp"
