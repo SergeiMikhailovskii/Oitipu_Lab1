@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity() {
         btn_zero.setOnClickListener(addDigitToInputExpression)
         btn_point.setOnClickListener(addDigitToInputExpression)
         btn_add.setOnClickListener(addDigitToInputExpression)
-        btn_substract.setOnClickListener(addDigitToInputExpression)
+        btn_subtract.setOnClickListener(addDigitToInputExpression)
         btn_multiply.setOnClickListener(addDigitToInputExpression)
         btn_divide.setOnClickListener(addDigitToInputExpression)
 
@@ -129,7 +129,7 @@ class MainActivity : AppCompatActivity() {
 
         btn_multiply.setOnClickListener(addSignToInputExpression)
         btn_divide.setOnClickListener(addSignToInputExpression)
-        btn_substract.setOnClickListener(addSignToInputExpression)
+        btn_subtract.setOnClickListener(addSignToInputExpression)
         btn_add.setOnClickListener(addSignToInputExpression)
 
         btn_equals?.setOnClickListener {

@@ -7,4 +7,18 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="LandTextStyle">
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="LandButtonRowStyle">
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:layout_marginEnd">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:textColor">#a3b7cb</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
 </resources>

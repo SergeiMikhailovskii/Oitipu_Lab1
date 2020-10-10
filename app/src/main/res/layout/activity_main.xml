@@ -270,7 +270,7 @@
         app:layout_constraintTop_toTopOf="@id/hor_52" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_substract"
+        android:id="@+id/btn_subtract"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="5dp"
